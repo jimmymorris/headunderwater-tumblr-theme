@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <meta property="og:title" content="{block:PostSummary}{PostSummary}{/block:PostSummary}"/>
+    <meta property="og:type" content="blog"/>
+    <meta property="og:url" content="{Permalink}"/>
+    <meta property="og:site_name" content="Head Underwater"/>
+    <meta property="fb:admins" content="18400798" />
+    <meta property="fb:page_id" content="114743185206421" />
+    <meta property="og:image" content="http://www.jimmy-morris.com/headunderwater/images/meta-image.jpg" />
+    <meta name="google-site-verification" content="7Yz-oBb6iGttvqNl2SzIeE15poohsWR9RTC49rGfjqg" />
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <link href="http://fonts.googleapis.com/css?family=Cabin+Condensed:400,700|Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://www.jimmy-morris.com/headunderwater/css/styles.css" />
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://www.jimmy-morris.com/headunderwater/js/modernizr.js"></script>
+	<script src="http://www.jimmy-morris.com/headunderwater/js/swag-makers.js"></script>
+    <script src="http://platform.twitter.com/widgets.js"></script>
+	<script type="text/javascript" src="http://static.extension.fm/exfm.js?user=jmorris"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4523810-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+</head>
+    <body>
+        <div id="fb-root"></div>
+		<script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=196110077066510";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+       	<div id="masthead">
+            <div id="masthead-images">
+                <img src="http://www.jimmy-morris.com/headunderwater/images/mastheads/real-estate.jpg" />
+            </div>
+            <a href="/" id="logo"><em class="alt">Head | Underwater</em></a>
+        </div>
+        <div id="wrapper">
+        	<div id="nav">
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="search" class="search-box" value="">
+                </form>
+                <ul>
+                	<li class="first"><a href="/about">About</a></li>
+                	<li><a href="/rss">RSS</a></li>
+                    <li><a href="/archive">Archive</a></li>
+                </ul>
+            </div>
+        	<div id="content">
+                {block:TagPage}
+	                <h2>Posts tagged "{Tag}"</h2>
+                {/block:TagPage}
+
+            	{block:SearchPage}
+                    <div class="post" id="search-results">
+                        <div id="searchresultcount">
+                            <p>Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</p>
+                        </div>
+                    </div>
+                {/block:SearchPage}
+                {block:Posts}
+                    {block:Audio}
+                        <div class="post audio">
+                            <div class="post-content">
+                            	{block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+                                {block:AudioPlayer}{AudioPlayerBlack}{/block:AudioPlayer}
+								{block:Caption}{Caption}{/block:Caption}
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        {block:Date}<a href="{Permalink}">{ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}
+                                    </li>
+                                    {block:NoteCount}<li class="post-notes post-meta">
+                                        <a href="{Permalink}">{NoteCountWithLabel}</a>
+                                    </li>{/block:NoteCount}
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Audio}
+                    {block:Photo}
+                        <div class="post photo">
+                            {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
+                            {block:HighRes}<a href="{PhotoURL-HighRes}" class="hi-rez"><em class="alt">View in High-Res</em></a>{/block:HighRes}
+                            <div class="post-content">
+								{block:Caption}{Caption}{/block:Caption}
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        <a href="{Permalink}">{block:Date}{ShortMonth}. {DayOfMonth}, {Year}{/block:Date}</a>
+                                    </li>
+                                    <li class="post-notes post-meta">
+                                        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                    </li>
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Photo}
+                    {block:Photoset}
+                        <div class="post photoset">
+                            <div class="post-content">
+                                <div id="ps{PostID}" class="image-set photoset" data-photoset-rows="{PhotosetLayout}">
+                                    {block:Photos}
+                                        <a href="{PhotoURL-HighRes}" class="photoset-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" alt="{PhotoAlt}" /></a>
+                                    {/block:Photos}
+								</div>
+								{block:Caption}{Caption}{/block:Caption}
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        <a href="{Permalink}">{block:Date}{ShortMonth}. {DayOfMonth}, {Year}{/block:Date}</a>
+                                    </li>
+                                    <li class="post-notes post-meta">
+                                        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                    </li>
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Photoset}
+                    {block:Video}
+                        <div class="post video">
+                            <div class="post-content">
+                            	<div class="viddy">{VideoEmbed-700}</div>
+								{block:Caption}{Caption}{/block:Caption}
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        <a href="{Permalink}">{block:Date}{ShortMonth}. {DayOfMonth}, {Year}{/block:Date}</a>
+                                    </li>
+                                    <li class="post-notes post-meta">
+                                        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                    </li>
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Video}
+                    {block:Text}
+                        <div class="post regular">
+                            <div class="post-content">
+                            	{block:Title}
+                                    <h1>{Title}</h1>
+                                {/block:Title}
+								{Body}
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        <a href="{Permalink}">{block:Date}{ShortMonth}. {DayOfMonth}, {Year}{/block:Date}</a>
+                                    </li>
+                                    <li class="post-notes post-meta">
+                                        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                    </li>
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Text}
+                    {block:Quote}
+                        <div class="post quote {Length}">
+                            <div class="post-content">
+                            	<blockquote>{Quote}</blockquote>
+                                <p>{block:Source}{Source}{/block:Source}</p>
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        <a href="{Permalink}">{block:Date}{ShortMonth}. {DayOfMonth}, {Year}{/block:Date}</a>
+                                    </li>
+                                    <li class="post-notes post-meta">
+                                        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                    </li>
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Quote}
+                    {block:Link}
+                        <div class="post link">
+                            <div class="post-content">
+                            	<h1><a href="{URL}" target="_blank">{Name}</a></h1>
+                                {block:Description}{Description}{/block:Description}
+                            </div>
+                            <div class="post-footer">
+                                {block:HasTags}
+                                    <ul class="tags">
+                                        {block:Tags}
+	                                        <li>
+    		                                    <a href="{TagURL}">{Tag}</a>
+            	                            </li>
+                                        {/block:Tags}                                                                                   
+                                    </ul>
+								{/block:HasTags}
+                                <ul class="post-nav">
+                                    <li class="post-date post-meta">
+                                        <a href="{Permalink}">{block:Date}{ShortMonth}. {DayOfMonth}, {Year}{/block:Date}</a>
+                                    </li>
+                                    <li class="post-notes post-meta">
+                                        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                                    </li>
+                                    <li class="post-share post-meta">
+                                        <a href="#">Share</a>
+                                    </li>
+                                    {block:HasTags}
+                                    <li class="post-tags post-meta">
+                                        <a href="#">Tags</a>
+                                    </li>
+                                    {/block:HasTags}
+                                </ul>
+                                <ul class="share-stuff">
+                                    <li class="permalink">{ShortURL}</li>
+                                    <li class="facebook-share">
+                                        <fb:like href="{Permalink}" send="false" layout="button_count" width="82" show_faces="false"></fb:like>
+                                    </li>
+                                    <li class="twitter-share">
+										<a href="http://twitter.com/share" class="twitter-share-button" data-url="{Permalink}" data-text="This is rad! via Head Underwater" data-count="horizontal" data-via="jimmy_morris">Tweet</a>
+                                   	</li>
+                                </ul>
+                            </div>
+                        </div>
+					{/block:Link}
+                    {block:PostNotes}{PostNotes}{/block:PostNotes}
+                {/block:Posts}
+            </div>
+            <div id="sidebar">
+            	<ul class="get-social">
+                	<li class="email"><a href="mailto:music.headunderwater[at]gmail.com" target="_blank">email</a></li>
+                	<li class="twitter"><a href="http://twitter.com/jimmy_morris" target="_blank">twitter</a></li>
+                	<li class="fcbk"><a href="http://www.facebook.com/headunderwaterblog" target="_blank">fcbk</a></li>
+                	<li class="sncld"><a href="http://soundcloud.com/headunderwater" target="_blank">sncld</a></li>
+                	<li class="flickr"><a href="http://www.flickr.com/photos/swimdfree/" target="_blank">flickr</a></li>
+                	<li class="insta"><a href="http://www.instagram.com/jimmymorris" target="_blank">insta</a></li>
+                	<li class="exfm"><a href="http://www.ex.fm/jmorris" target="_blank">ex.fm</a></li>
+                	<li class="hypem"><a href="http://hypem.com/list/11740/" target="_blank">hypem</a></li>
+                	<li class="shfflr"><a href="http://shuffler.fm/blogs/head-underwater" target="_blank">shfflr</a></li>
+                </ul>
+                <ul class="expandables">
+                    <li class="mixtapes">
+                    	<a href="#">Mixtapes</a>
+                    	<ul>
+                            <li><a href="http://www.headunderwater.com/post/32673057553/estivated-head-underwater-mixtape"  onClick="javascript: pageTracker._trackPageview('/outgoing/estivated');"><img src="http://www.jimmy-morris.com/headunderwater/images/estivated.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/17614658855/recrudesce-head-underwater-mixtape"  onClick="javascript: pageTracker._trackPageview('/outgoing/recrudesce');"><img src="http://www.jimmy-morris.com/headunderwater/images/recrudesce.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/12197134275/whitehurst-frwy-head-underwater-mixtape"  onClick="javascript: pageTracker._trackPageview('/outgoing/whitehurst-frwy-mixtape');"><img src="http://www.jimmy-morris.com/headunderwater/images/whitehurstfrwy.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/4719899067/no-rush-headunderwater-mixtape"  onClick="javascript: pageTracker._trackPageview('/outgoing/no-rush-mixtape');"><img src="http://www.jimmy-morris.com/images/no-rush.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/2133254641/bearhaus-headunderwater-mixtape"  onClick="javascript: pageTracker._trackPageview('/outgoing/bearhaus-mixtape');"><img src="http://www.jimmy-morris.com/images/BEARHAUS.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/568253076/kibbles-mixtape"  onClick="javascript: pageTracker._trackPageview('/outgoing/kibbles-mixtape');"><img src="http://www.jimmy-morris.com/images/kibbles.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/266361474/feet-above-water-a-head-underwater-mixtape-it" onClick="javascript: pageTracker._trackPageview('/outgoing/feet-above-water');"><img src="http://www.jimmy-morris.com/headunderwater/images/fuw-thumb.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/80763400/topeka-mixtape" onClick="javascript: pageTracker._trackPageview('/outgoing/topeka');"><img src="http://www.jimmy-morris.com/headunderwater/images/topeka-thumb.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/80691008/peidmont-mixtape" onClick="javascript: pageTracker._trackPageview('/outgoing/peidmont');"><img src="http://www.jimmy-morris.com/headunderwater/images/piedmont-thumb.jpg" /></a></li>
+                            <li><a href="http://www.headunderwater.com/post/80852567/arlington-mixtape" onClick="javascript: pageTracker._trackPageview('/outgoing/arlington');"><img src="http://www.jimmy-morris.com/headunderwater/images/arlington-thumb.jpg" /></a></li>
+                        </ul>
+                    </li>
+                	<li class="friends">
+                    	<a href="#">Friends</a>
+                   		<ul>
+                            <li><a href="http://www.allournoise.com/" target="_blank" class="track" target="_blank" class="track">All Our Noise</a></li>
+                            <li><a href="http://antleredpigeons.tumblr.com/" target="_blank" class="track" target="_blank" class="track">Antlered Pigeons</a></li>
+                            <li><a href="http://www.aquariumdrunkard.com/" target="_blank" class="track" target="_blank" class="track">Aquarium Drunkard</a></li>
+                            <li><a href="http://awesometapesfromafrica.blogspot.com/" target="_blank" class="track" target="_blank" class="track">Awesome Tapes from Africa</a></li>
+                            <li><a href="http://www.bmoremusic.net/" target="_blank" class="track" target="_blank" class="track">Bmore Musically Informed</a></li>
+                            <li><a href="http://clumsynshy.blogspot.com" target="_blank" class="track">Clumsy & Shy</a></li>
+                            <li><a href="http://www.deadasdigital.com/" target="_blank" class="track">Dead as Digital</a></li>
+                            <li><a href="http://www.secretdecoder.net/" target="_blank" class="track">Decoder</a></li>
+                            <li><a href="http://www.dippedindollars.com/" target="_blank" class="track">Dipped In Dollars</a></li>
+                            <li><a href="http://www.disconaivete.com/" target="_blank" class="track">Disco Na&iuml;vet&eacute;</a></li>
+                            <li><a href="http://www.earsofthebeholder.com/" target="_blank" class="track">Ears of the Beholder</a></li>
+							<li><a href="http://www.everybodytaste.com" target="_blank" class="track">Everybody Taste</a></li>
+                            <li><a href="http://flashlighttagmusic.tumblr.com/" target="_blank" class="track">Flashlight Tag</a></li>
+                            <li><a href="http://www.friendswithbotharms.com/" target="_blank" class="track">Friends with Both Arms</a></li>
+                            <li><a href="http://gimmetinnitus.com/" target="_blank" class="track">Gimme Tinnitus</a></li>
+                            <li><a href="http://www.gorillavsbear.net/" target="_blank" class="track">Gorilla vs Bear</a></li>
+                            <li><a href="http://meganmcisaac.tumblr.com/" target="_blank" class="track">Hello, Romantic</a></li>
+                            <li><a href="http://www.iguessimfloating.net/" target="_blank" class="track">I Guess I'm Floating</a></li>
+                            <li><a href="http://www.jackinthepocket.com/" target="_blank" class="track">Jack in the Pocket</a></li>
+                            <li><a href="http://www.knoxroad.com/" target="_blank" class="track">Knox Road</a></li>
+                            <li><a href="http://www.lifeaquaticblog.com/" target="_blank" class="track">Life Aquatic [RIP]</a></li>
+                            <li><a href="http://www.newdust.com/" target="_blank" class="track">New Dust</a></li>
+                            <li><a href="http://www.nofearofpop.com/" target="_blank" class="track">No Fear of Pop</a></li>
+                            <li><a href="http://www.pastaprimavera.com/" target="_blank" class="track">Pasta Primavera</a></li>
+                            <li><a href="http://www.portalsmusic.com" target="_blank" class="track">PORTALS</a></li>
+                            <li><a href="http://www.rollogrady.com/" target="_blank" class="track">Rollo Grady</a></li>
+                            <li><a href="http://saladfork.tumblr.com/" target="_blank" class="track">Salad Fork</a></li>
+                            <li><a href="http://www.sarahspy.com/" target="_blank" class="track">Sarah Spy</a></li>
+                            <li><a href="http://www.smokedontsmoke.com/" target="_blank" class="track">Smoke Don't Smoke</a></li>
+                            <li><a href="http://www.stadiumsandshrines.com/" target="_blank" class="track">Stadium & Shrines</a></li>
+                            <li><a href="http://unholyrhythms.tumblr.com/" target="_blank" class="track">Unholy Rhythms</a></li>
+                            <li><a href="http://www.verbreverb.com/" target="_blank" class="track">Verb/Re/Verb</a></li>
+                            <li><a href="http://www.weeklytapedeck.com/" target="_blank" class="track">Weekly Tape Deck</a></li>
+                            <li><a href="http://www.yesyesyall.org/" target="_blank" class="track">Yes Yes Y'all</a></li>
+                            <li><a href="http://www.yourstru.ly/" target="_blank" class="track">Your's Truly</a></li>
+                            <li><a href="http://yvynyl.tumblr.com/" target="_blank" class="track">YVYNYL</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {block:Pagination}
+    	    <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
+            	{block:PreviousPage}<a href="{PreviousPage}">&larr; previous</a>{/block:PreviousPage}
+                {block:JumpPagination length="5"}
+                    {block:CurrentPage} <span class="current_page">{PageNumber}</span> {/block:CurrentPage}
+                    {block:JumpPage} <a class="jump_page" href="{URL}">{PageNumber}</a> {/block:JumpPage}
+                {/block:JumpPagination}
+				{block:NextPage}<a href="{NextPage}">next page &rarr;</a>{/block:NextPage} </div>
+		    </div>
+            {/block:Pagination}
+        </div>
+		<!--[if lte IE 8 ]>
+        <div id="ah-shoot">
+        	<p>Ah shoot... you're using a terrible Internet Browser. Please do yourself a favor and download either <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a> [my favorite], <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>, the <a href="http://windows.microsoft.com/en-US/internet-explorer/download-ie" target="_blank">lastest version of IE</a>, <a href="http://support.apple.com/downloads/#safari" target="_blank">Safari</a> or <a href="http://www.opera.com/download/" target="_blank">Opera</a>.</p>
+        </div>
+        <![endif]--> 
+    </body>
+</html>
